@@ -71,6 +71,9 @@ header {
   transition: all 0.3s ease-in-out;
 }
 
+p {
+  text-decoration: line-through;
+}
 /* .lead {
   color: rgb(124, 221, 231);
   font-size: 25px;
