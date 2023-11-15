@@ -1,4 +1,7 @@
 // Display the current day at the top of the calender when a user opens the planner.
+// Adding the current day to calendar
+var today = dayjs();
+$("#currentDay").text(today.format("D MMM YYYY"));
 
 // Present time-blocks for standard business hours when the user scrolls down.
 
