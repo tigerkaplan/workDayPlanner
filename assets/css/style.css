@@ -42,13 +42,13 @@ header {
 }
 
 .hour {
-  background-color: #ffffff;
+  background-color: black;
   color: #000000;
   border-bottom: 1px solid black;
   }
 
 .past {
-  background-color: #d3d3d3;
+  background-color: #d3d3d38a;
   color: white;
 }
 
