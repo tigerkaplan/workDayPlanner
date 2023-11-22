@@ -1,31 +1,41 @@
 // Adding the current day to calendar
 var currentDate = dayjs ().format ('dddd, MMMM D, YYYY');
 $ ('#currentDay').text (currentDate);
+var now = dayjs()
 
 // Present time-blocks for standard business hours when the user scrolls down.
 function generateTimeBlocks () {
   var container = $ ('#blockTime'); //blocking hours
   var businessHours = [
-    '8:00',
-    '9:00',
-    '10:00',
-    '11:00',
-    '12:00',
-    '13:00',
-    '14:00',
-    '15:00',
-    '16:00',
-    '17:00',
+    '8',
+    '9',
+    '10',
+    '11',
+    '12',
+    '13',
+    '14',
+    '15',
+    '16',
+    '17',
   ];
   businessHours.forEach (function (hour) {
-    var hourFormatted = dayjs (hour, 'H:m').format ('h a'); // Formatting hours
+    let color;
+    var presentTime = dayjs().hour();
+    if (hour < presentTime) {
+      color = "past"
+    } else if  (hour === presentTime) {
+      color= "present"
+    } else {
+      color= "future"
+    }
     var timeBlock = `
-    <div class="row">
-    </div><div class="col-1 hour time-block">${HourFormatted}</div>
-    <textarea class="col-8 input"></textarea>
-    <button class="col-1 saveBtn fw-bold text-black"><i class="bi bi-check-all"></i></button>
-    </div>
+   <div class="row ${color}">
+   <div class="col-1 hour time-block fw-bold text-black">${hour}:00</div>
+   <textarea class="col-10 input" placeholder="Add your note!"></textarea>
+   <button class="col-1 saveBtn fw-bold text-black"><i class="bi bi-check-all"></i></button>
+   </div>
   `;
+    container.append(timeBlock)  // adding to browser
   });
 }
 $ (document).ready (function () {
