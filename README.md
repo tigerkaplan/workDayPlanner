@@ -1,11 +1,11 @@
 
 ## Work Day Planner
 
-The project about using 101 Javascript element variables on different projects
+The project about using planning a day in business hours
 
 
 ## About the Project
-the project shows that  front-end developer's project work for on it. The project on how Javascript using on finances sector. 
+the project shows that front-end developer's project work for on it. The application project targeting that schedule the business hours 
 
 ## Screenshots
 
@@ -21,6 +21,8 @@ the project shows that  front-end developer's project work for on it. The projec
 
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
+![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
@@ -33,6 +35,7 @@ the project shows that  front-end developer's project work for on it. The projec
 
 
 ## Used By
+The work day planner could be used by who want to do schedule their business hours. 
 
 ## Contributing
 
