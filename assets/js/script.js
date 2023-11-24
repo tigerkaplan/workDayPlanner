@@ -1,11 +1,11 @@
 // Adding the current day to calendar
 var currentDate = dayjs ().format ('dddd, MMMM D, YYYY');
 $ ('#currentDay').text (currentDate);
-var now = dayjs()
+var now = dayjs ();
 
 // Present time-blocks for standard business hours when the user scrolls down.
 function generateTimeBlocks () {
-  var container = $ ('#blockTime'); //blocking hours
+  var container = $ ('#blockTime'); // Container to append time blocks
   var businessHours = [
     '8',
     '9',
@@ -18,26 +18,30 @@ function generateTimeBlocks () {
     '16',
     '17',
   ];
+
   businessHours.forEach (function (hour) {
-    let color;
-    var presentTime = dayjs().hour();
+    var presentTime = dayjs ().hour ();
+    var color;
+
     if (hour < presentTime) {
-      color = "past"
-    } else if  (hour === presentTime) {
-      color= "present"
+      color = 'past';
+    } else if (hour == presentTime) {
+      color = 'present';
     } else {
-      color= "future"
+      color = 'future';
     }
+
     var timeBlock = `
-   <div class="row ${color}">
-   <div class="col-1 hour time-block fw-bold text-black">${hour}:00</div>
-   <textarea class="col-10 input" placeholder="Add your note!"></textarea>
-   <button class="col-1 saveBtn fw-bold text-black"><i class="bi bi-check-all"></i></button>
-   </div>
-  `;
-    container.append(timeBlock)  // adding to browser
+      <div class="row ${color}">
+        <div class="col-1 hour time-block fw-bold text-black">${hour}:00</div>
+        <textarea class="col-10 input" placeholder="Add your note!"></textarea>
+        <button class="col-1 saveBtn fw-bold text-black"><i class="bi bi-check-all"></i></button>
+      </div>
+    `;
+    container.append (timeBlock); // Append time block to the container
   });
 }
+
 $ (document).ready (function () {
   generateTimeBlocks ();
 });
@@ -48,7 +52,7 @@ $ ('.time-block').each (function () {
   var blockedHour = parseInt ($ (this).text ().split ('')[0]);
   if (blockedHour < presentTime) {
     $ (this).addClass ('past');
-  } else if (blockedHour === presentTime) {
+  } else if ((blockedHour = presentTime)) {
     $ (this).addClass ('present');
   } else {
     $ (this).addClass ('future');
